@@ -19,11 +19,11 @@ const ValuacionRiesgo = () => {
       );
       
       const data = {
-        labels: Array.from({length: 500}, (_, i) => `Mes ${i + 1}`),
+        labels: Array.from({length: 1600}, (_, i) => `Mes ${i + 1}`),
         datasets: [
           {
             label: 'Valor de la opción',
-            data: Array.from({length: 500}, () => Math.floor(Math.random() * 10000)),
+            data: Array.from({length: 1600}, (_,i) => i+1),
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             borderWidth: 1
@@ -109,7 +109,7 @@ const ValuacionRiesgo = () => {
               />
             </div>
 
-            <button type="submit" className="btn btn-primary w-100">Calcular Precio</button>
+            <button type="submit" className="btn btn-primary w-100">Calcular Riesgos de la acción</button>
             {precio && <p className="alert alert-success mt-4">Precio de la Opción: {precio}</p>}
           </form>
         </div>
