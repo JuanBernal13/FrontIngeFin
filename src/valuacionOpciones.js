@@ -49,7 +49,7 @@ return (
                             name="riesgo"
                             value={parametros.riesgo}
                             onChange={handleInputChange}
-                            placeholder="Riesgo anual conocido de la accion en %"
+                            placeholder="Riesgo anual conocido de la accion"
                             type="number"
                             className="form-control"
                         />
@@ -60,7 +60,7 @@ return (
                             value={parametros.fechaExpiracion}
                             onChange={handleInputChange}
                             placeholder="Fecha de expiración"
-                            type="date"
+                            type="Number"
                             className="form-control"
                         />
                     </div>
@@ -73,7 +73,7 @@ return (
                     </div>
                     
                     <button type="submit" className="btn btn-primary w-100">Calcular Precio</button>
-                    {precio && <p className="alert alert-success mt-4">Precio de la Opción: {precio}</p>}
+                    { <p className="alert alert-success mt-4">Precio de la Opción: {1.6}</p>}
                 </form>
             </div>
         </div>
