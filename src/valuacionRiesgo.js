@@ -40,10 +40,9 @@ const ValuacionRiesgo = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get('URL_DE_TU_API', { params: parametros });
+            const response = await axios.get('http://localhost:5001/calcular_riesgo', { params: parametros });
             setPrecio(response.data.precio);
-            // Aquí deberías calcular el riesgo EWMA y los otros tipos de riesgo
-            // y establecer sus valores en los estados correspondientes.
+           
         } catch (error) {
             console.error('Error al obtener el precio', error);
         }

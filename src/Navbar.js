@@ -13,6 +13,9 @@ const Navbar = () => {
               <Link className="nav-link" to="/" style={linkStyle}>Inicio</Link>
             </li>
             <li className="nav-item" style={liStyle}>
+              <Link className="nav-link" to="/presentacion" style={linkStyle}><b> Explicacion!</b></Link>
+            </li>
+            <li className="nav-item" style={liStyle}>
               <Link className="nav-link" to="/valuacion-opciones" style={linkStyle}>Valuacion Opciones</Link>
             </li>
             <li className="nav-item" style={liStyle}>
@@ -23,9 +26,7 @@ const Navbar = () => {
               <Link className="nav-link" to="/blog" style={linkStyle}>Blog</Link>
             </li>
 
-            <li className="nav-item" style={liStyle}>
-              <Link className="nav-link" to="/presentacion" style={linkStyle}><b> Presentacion!</b></Link>
-            </li>
+            
 
             
             <li className="nav-item" style={liStyle}>
