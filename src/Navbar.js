@@ -16,16 +16,23 @@ const Navbar = () => {
               <Link className="nav-link" to="/valuacion-opciones" style={linkStyle}>Valuacion Opciones</Link>
             </li>
             <li className="nav-item" style={liStyle}>
-              <Link className="nav-link" to="/valuacion-riesgo" style={linkStyle}>Valuacion Riesgo</Link>
+              <Link className="nav-link" to="/valuacion-riesgo1" style={linkStyle}>Valuacion Riesgo</Link>
             </li>
             
             <li className="nav-item" style={liStyle}>
-              <Link className="nav-link" to="/definiciones" style={linkStyle}>Blog</Link>
+              <Link className="nav-link" to="/blog" style={linkStyle}>Blog</Link>
             </li>
 
             <li className="nav-item" style={liStyle}>
+              <Link className="nav-link" to="/presentacion" style={linkStyle}><b> Presentacion!</b></Link>
+            </li>
+
+            
+            <li className="nav-item" style={liStyle}>
               <Link className="nav-link" to="/definiciones" style={linkStyle}><b> Diccionario financiero!</b></Link>
             </li>
+
+            
           </ul>
         </div>
       </div>

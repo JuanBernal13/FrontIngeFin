@@ -3,8 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import ValuacionOpciones from './valuacionOpciones';
-import ValuacionRiesgo from './valuacionRiesgo';
+import ValuacionRiesgo1 from './valuacionRiesgo1';
 import Definiciones from './definiciones';
+import Blog from './blog'; 
+import Presentacion from './presentacion';
 
 import Navbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,8 +19,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/valuacion-opciones" element={<ValuacionOpciones />} />
-          <Route path="/valuacion-riesgo" element={<ValuacionRiesgo />} />
+          <Route path="/valuacion-riesgo1" element={<ValuacionRiesgo1 />} />
           <Route path="/definiciones" element={<Definiciones />} />
+          <Route path="/blog" element={<Blog />} /> {/* Verifica esta línea */}
+          <Route path="/presentacion" element={<Presentacion />} /> {/* Verifica esta línea */}
 
         </Routes>
       </div>
