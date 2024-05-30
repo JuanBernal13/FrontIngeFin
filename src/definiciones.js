@@ -4,7 +4,7 @@ import styles from './Definitions.module.css';
 const Definitions = () => {
     const concepts = [
         { title: 'Riesgo', definition: 'Probabilidad de pérdida.' },
-        { title: 'EWMA', definition: 'Método de cálculo de volatilidad basado en eventis previos.' },
+        { title: 'EWMA', definition: 'Método de cálculo de volatilidad basado en eventos previos.' },
         { title: 'Movimiento Browniano', definition: 'Modelo de movimiento aleatorio.' },
         { title: 'Probabilidad de Riesgo Neutral', definition: 'Probabilidad ajustada por riesgo.' },
         { title: 'Probabilidad Real', definition: 'Probabilidad basada en eventos reales.' },
@@ -18,15 +18,13 @@ const Definitions = () => {
         { title: 'Riesgo de Liquidez', definition: 'Dificultad para convertir activos en efectivo.' },
         { title: 'Riesgo Sistémico', definition: 'Riesgo de colapso financiero.' },
         { title: 'Riesgo No Sistémico', definition: 'Riesgo específico de un activo.' },
-        { title: 'Delta', definition: 'Sensibilidad al precio del activo.' },
-        { title: 'Gamma', definition: 'Tasa de cambio de Delta.' },
-        { title: 'Vega', definition: 'Sensibilidad a la volatilidad.' },
-        { title: 'Theta', definition: 'Sensibilidad al paso del tiempo.' },
-        { title: 'Rho', definition: 'Sensibilidad a la tasa de interés.' },
         { title: 'Call', definition: 'Opción de comprar un activo.' },
         { title: 'Put', definition: 'Opción de vender un activo.' },
         { title: 'Valor Intrínseco', definition: 'Diferencia entre el precio del activo y el precio de ejercicio.' },
-        { title: 'Valor Temporal', definition: 'Valor de una opción antes de su vencimiento.' }
+        { title: 'Valor Temporal', definition: 'Valor de una opción antes de su vencimiento.' },
+        { title: 'Alpha', definition: 'Medida de la rentabilidad ajustada al riesgo.' },
+        { title: 'Beta', definition: 'Medida de la volatilidad de un activo en comparación con el mercado.' },
+        { title: 'Sharpe Ratio', definition: 'Medida de rendimiento ajustado al riesgo.' }
     ];
 
     return (

@@ -26,12 +26,28 @@ const Navbar = () => {
               <Link className="nav-link" to="/blog" style={linkStyle}>Blog</Link>
             </li>
 
-            
+            <li className="nav-item" style={liStyle}>
+              <Link className="nav-link" to="/estrategias" style={linkStyle}>Estrategia</Link>
+            </li>
 
-            
+            <li className="nav-item" style={liStyle}>
+              <Link className="nav-link" to="/varaccion" style={linkStyle}><b> VaR accion</b></Link>
+            </li>
+
+            <li className="nav-item" style={liStyle}>
+              <Link className="nav-link" to="/sensibilidad" style={linkStyle}><b>Analisis de Sensibilidad</b></Link>
+            </li>
+            <li className="nav-item" style={liStyle}>
+              <Link className="nav-link" to="/montecarlo" style={linkStyle}><b>Simulacion de montecarlo</b></Link>
+            </li>
+
+
             <li className="nav-item" style={liStyle}>
               <Link className="nav-link" to="/definiciones" style={linkStyle}><b> Diccionario financiero!</b></Link>
             </li>
+
+            
+
 
             
           </ul>

@@ -7,7 +7,10 @@ import ValuacionRiesgo1 from './valuacionRiesgo1';
 import Definiciones from './definiciones';
 import Blog from './blog'; 
 import Presentacion from './presentacion';
-
+import ZeroCostCollar from './zeroCostDollar';
+import VaRComponent from './varComponent'; 
+import SensitivityAnalysis from './SensitivityAnalysis';
+import MonteCarloSimulation from './MontecarloSimulation';
 import Navbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,6 +26,10 @@ const App = () => {
           <Route path="/definiciones" element={<Definiciones />} />
           <Route path="/blog" element={<Blog />} /> {/* Verifica esta línea */}
           <Route path="/presentacion" element={<Presentacion />} /> {/* Verifica esta línea */}
+          <Route path="/estrategias" element={<ZeroCostCollar />} /> {/* Verifica esta línea */}
+          <Route path="/varaccion" element={<VaRComponent />} /> {/* Verifica esta línea */}
+          <Route path="/sensibilidad" element={<SensitivityAnalysis />} /> {/* Verifica esta línea */}
+          <Route path="/montecarlo" element={<MonteCarloSimulation />} /> {/* Verifica esta línea */}
 
         </Routes>
       </div>

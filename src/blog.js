@@ -32,7 +32,7 @@ const Blog = () => {
     return (
         <div className="blog-container">
             <h1>Registro de Acciones</h1>
-            <form onSubmit={handleSubmit} className="form-container">
+            <form onSubmit={handleSubmit} className="form-container custom-card">
                 <div className="form-group">
                     <label>Nombre de la Acción:</label>
                     <input
@@ -40,6 +40,7 @@ const Blog = () => {
                         value={accion}
                         onChange={(e) => setAccion(e.target.value)}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -49,6 +50,7 @@ const Blog = () => {
                         value={calificacion}
                         onChange={(e) => setCalificacion(e.target.value)}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -57,9 +59,10 @@ const Blog = () => {
                         value={descripcion}
                         onChange={(e) => setDescripcion(e.target.value)}
                         required
+                        className="form-control"
                     ></textarea>
                 </div>
-                <button type="submit">Registrar Acción</button>
+                <button type="submit" className="btn btn-primary">Registrar Acción</button>
             </form>
             <h2>Filtrar Historial</h2>
             <div className="form-group">
@@ -68,6 +71,7 @@ const Blog = () => {
                     type="text"
                     value={filtroAccion}
                     onChange={(e) => setFiltroAccion(e.target.value)}
+                    className="form-control"
                 />
             </div>
             <div className="form-group">
@@ -76,6 +80,7 @@ const Blog = () => {
                     type="text"
                     value={filtroCalificacion}
                     onChange={(e) => setFiltroCalificacion(e.target.value)}
+                    className="form-control"
                 />
             </div>
             <div className="form-group">
@@ -84,11 +89,12 @@ const Blog = () => {
                     type="date"
                     value={filtroFecha}
                     onChange={(e) => setFiltroFecha(e.target.value)}
+                    className="form-control"
                 />
             </div>
             <h2>Historial</h2>
-            <table>
-                <thead>
+            <table className="table table-striped table-bordered">
+                <thead className="thead-dark">
                     <tr>
                         <th>Nombre de la Acción</th>
                         <th>Calificación</th>

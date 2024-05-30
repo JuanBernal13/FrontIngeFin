@@ -3,6 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
+import './valuacionRiesgo1.css';
 
 ChartJS.register(
     CategoryScale,
@@ -107,70 +108,73 @@ const ValuacionRiesgo1 = () => {
     };
 
     return (
-        <div className="container mt-5 d-flex justify-content-center">
-            <div className="container mt-5">
-                <div className="row justify-content-center">
-                    <div className="col-md-6">
-                        <form onSubmit={handleSubmit} className="card card-body">
-                            <h3 className="text-center mb-4">Valoración de Riesgo</h3>
-                            <div className="form-group mb-3">
-                                <input
-                                    name="codigoAccion"
-                                    value={parametros.codigoAccion}
-                                    onChange={handleInputChange}
-                                    placeholder="Código de la acción en Yahoo Finance"
-                                    className="form-control"
-                                />
-                            </div>
-                            <div className="form-group mb-3">
-                                <p>Fecha de inicio de la toma</p>
-                                <input
-                                    name="fechaInicio"
-                                    value={parametros.fechaInicio}
-                                    onChange={handleInputChange}
-                                    type="date"
-                                    className="form-control"
-                                />
-                            </div>
-                            <div className="form-group mb-3">
-                                <p>Fecha final de la toma</p>
-                                <input
-                                    name="fechaFinal"
-                                    value={parametros.fechaFinal}
-                                    onChange={handleInputChange}
-                                    type="date"
-                                    className="form-control"
-                                />
-                            </div>
-                            <button type="submit" className="btn btn-primary w-100">Calcular Riesgos de la acción</button>
-                            {error && <p className="alert alert-danger mt-4">{error}</p>}
-                            {volatilidad > 0 && <p className="alert alert-success mt-4">Volatilidad Anualizada: {volatilidad.toFixed(4)}</p>}
-                        </form>
-                    </div>
+        <div className="container mt-5">
+            <div className="row justify-content-center">
+                <div className="col-md-6">
+                    <form onSubmit={handleSubmit} className="card card-body custom-card">
+                        <h3 className="text-center mb-4">Valoración de Riesgo</h3>
+                        <div className="form-group mb-3">
+                            <input
+                                name="codigoAccion"
+                                value={parametros.codigoAccion}
+                                onChange={handleInputChange}
+                                placeholder="Código de la acción en Yahoo Finance"
+                                className="form-control"
+                                required
+                            />
+                        </div>
+                        <div className="form-group mb-3">
+                            <label htmlFor="fechaInicio">Fecha de inicio de la toma</label>
+                            <input
+                                name="fechaInicio"
+                                value={parametros.fechaInicio}
+                                onChange={handleInputChange}
+                                type="date"
+                                className="form-control"
+                                required
+                            />
+                        </div>
+                        <div className="form-group mb-3">
+                            <label htmlFor="fechaFinal">Fecha final de la toma</label>
+                            <input
+                                name="fechaFinal"
+                                value={parametros.fechaFinal}
+                                onChange={handleInputChange}
+                                type="date"
+                                className="form-control"
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-primary w-100">Calcular Riesgos de la acción</button>
+                        {error && <p className="alert alert-danger mt-4">{error}</p>}
+                        {volatilidad > 0 && <p className="alert alert-success mt-4">Volatilidad Anualizada: {volatilidad.toFixed(4)}</p>}
+                    </form>
                 </div>
+            </div>
 
-                <div className="row mt-5">
-                    <div className="col-md-8">
+            <div className="row mt-5">
+                <div className="col-md-8">
+                    <div className="chart-container">
                         <Line data={data} options={options} />
                     </div>
-                    <div className="col-md-4">
-                        <div className="card mb-4">
-                            <div className="card-body">
-                                <h5 className="card-title">Volatilidad Histórica</h5>
-                                <p className="card-text">{volatilidad.toFixed(4)}</p>
-                            </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="card mb-4">
+                        <div className="card-body">
+                            <h5 className="card-title">Volatilidad Histórica</h5>
+                            <p className="card-text">{volatilidad.toFixed(4)}</p>
                         </div>
-                        <div className="card mb-4">
-                            <div className="card-body">
-                                <h5 className="card-title">Volatilidad EWMA</h5>
-                                <p className="card-text">{volatilidadEWMA.toFixed(4)}</p>
-                            </div>
+                    </div>
+                    <div className="card mb-4">
+                        <div className="card-body">
+                            <h5 className="card-title">Volatilidad EWMA</h5>
+                            <p className="card-text">{volatilidadEWMA.toFixed(4)}</p>
                         </div>
-                        <div className="card mb-4">
-                            <div className="card-body">
-                                <h5 className="card-title">Volatilidad GARCH(1,1)</h5>
-                                <p className="card-text">{volatilidadGARCH.toFixed(4)}</p>
-                            </div>
+                    </div>
+                    <div className="card mb-4">
+                        <div className="card-body">
+                            <h5 className="card-title">Volatilidad GARCH(1,1)</h5>
+                            <p className="card-text">{volatilidadGARCH.toFixed(4)}</p>
                         </div>
                     </div>
                 </div>

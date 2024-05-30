@@ -8,10 +8,10 @@ const Home = () => {
       <h1>Bienvenidos a nuestro Proyecto del curso de Ingenieria Financiera!</h1>
       <p><b> Integrantes </b> </p>
       <ul> 
-        <li> Juan Andres Bernal Gil - 202110848</li>
-        <li> Andres Felipe Chaparro Diaz - #####</li>
-        <li> Santiago Nicolas Melo Camacho - ######</li>
-        <li> Daniel Sebastian Caro Ochoa - ######</li>
+        <li> Juan Andres Bernal Gil </li>
+        <li> Andres Felipe Chaparro Diaz</li>
+        <li> Santiago Nicolas Melo Camacho</li>
+        <li> Daniel Sebastian Caro Ochoa</li>
 
       </ul>
     </div>

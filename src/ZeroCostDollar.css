@@ -1,39 +1,38 @@
-.blog-container {
+.zero-cost-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     min-height: 100vh;
 }
 
-h1, h2 {
+.zero-cost-container h1 {
     color: #007bff;
+    margin-bottom: 20px;
 }
 
-.form-container {
+.zero-cost-form-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 600px;
-    margin-bottom: 20px;
-    padding: 20px;
     background-color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.zero-cost-form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
+.zero-cost-form-group label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.form-group input,
-.form-group textarea {
+.zero-cost-form-group input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -41,13 +40,12 @@ h1, h2 {
     border: 1px solid #ced4da;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.zero-cost-form-group input:focus {
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-button {
+.zero-cost-btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -56,24 +54,25 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.zero-cost-btn:hover {
     background-color: #0056b3;
 }
 
-.table {
-    width: 100%;
-    max-width: 800px;
+.zero-cost-result-container {
     margin-top: 20px;
+    padding: 20px;
     background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
-.table th,
-.table td {
-    padding: 10px;
-    text-align: left;
+.zero-cost-result-container h2 {
+    color: #007bff;
+    margin-bottom: 20px;
 }
 
-.table thead {
-    background-color: #007bff;
-    color: white;
+.zero-cost-result-container p {
+    margin: 5px 0;
 }
